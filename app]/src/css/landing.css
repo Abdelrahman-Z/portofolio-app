@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+
+.landing{
+    background-color: hsl(0, 0%, 98%);
+    padding: 50px 0;
+    font-family: 'Roboto', sans-serif;
+    min-height: calc(100vh - 181px);
+}
+.landing.dark{
+    background-color: hsl(207, 26%, 17%);
+}
+
+.landing .container .searching{
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.landing .container .searching input {
+    text-indent: 10px;
+    width: 30%;
+}
+
+.landing .container .searching :is(input , select){
+    padding: 20px 10px;
+    padding-right: 50px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 1px 0 #fff;
+}
+.landing.dark .container .searching :is(input , select){
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    box-shadow: 0 0 1px 0 hsl(209, 23%, 22%);
+}
+.landing.dark .container .searching input::placeholder{
+    color: white;
+}
+
+.landing .container .searching select option{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 10px;
+}
+
+.landing .container .countries{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 40px;
+}
+.landing .container .countries .country-card {
+    border-radius: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 1px 0 #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+.landing.dark .container .countries .country-card {
+    background-color: hsl(209, 23%, 22%);
+    box-shadow: 0 0 1px 0 hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+}
+
+.landing .container .countries .country-card .image{
+    max-height: 50%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.landing .container .countries .country-card .image img{
+    height: 100%;
+    width: 100%;
+}
+.country-card .data{
+    padding: 0 10px;
+}
+.country-card .data span {
+    font-weight: bold;
+}
+
+
+@media(max-width:767px){
+    .landing .container .searching input{
+        width: 100%;
+    }
+    .landing .container .searching select{
+        margin-top: 30px;
+    }
+}
